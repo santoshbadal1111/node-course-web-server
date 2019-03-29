@@ -39,7 +39,12 @@ app.get('/', (req, res) => {
     welcomeMessage: 'Welcome to home page!'
   });
 });
-
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle: 'Portfolio Page',
+    welcomeMessage: 'Welcome to portfolio page!'
+  });
+});
 app.get('/bad', (req, res) => {
   res.send({ errorMessage: 'Unable to handle request' });
 });
